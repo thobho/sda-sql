@@ -1,0 +1,32 @@
+CREATE TABLE `UserStaff` (
+  Id int(11) NOT NULL AUTO_INCREMENT,
+  UserId int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (Id),
+  CONSTRAINT UserStaff_ibfk_1
+    FOREIGN KEY (UserId) 
+    REFERENCES User (Id) 
+    ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+-- TRUNCATE demo
+CREATE TABLE test(
+	id INT,
+    name VARCHAR(10)
+);
+
+
+INSERT INTO test VALUES
+(1, "2da"),
+(2, "2da"),
+(3, "2da");
+
+SELECT * FROM test;
+TRUNCATE test;
+
+EXPLAIN SELECT * FROM osoba;
+
+
+
+
